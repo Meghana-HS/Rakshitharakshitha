@@ -1,0 +1,13 @@
+{
+  "name": "birthday-slideshow",
+  "version": "1.0.0",
+  "description": "Birthday Slideshow App",
+  "scripts": {
+    "install": "cd frontend && npm install",
+    "build": "cd frontend && npm run build",
+    "start": "cd frontend && npm start"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
