@@ -25,7 +25,8 @@ const GalleryPhotos = () => {
 
   const photoMessages = [
     "📸 Special Collection 📸",
-    "🌟 Personal Moments 🌟"
+    "🌟 Personal Moments 🌟",
+    "💕 Moments Together 💕"
   ];
 
   useEffect(() => {
