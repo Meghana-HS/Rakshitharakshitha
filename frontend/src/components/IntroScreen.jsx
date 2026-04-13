@@ -181,7 +181,7 @@ const IntroScreen = () => {
               onClick={handleAppajiSeries}
               style={{ animationDelay: '2.0s', marginTop: '0.5rem', fontSize: '0.85rem', padding: '0.6rem 1.2rem' }}
             >
-              💖 Appaji – My World
+              Bestii
             </button>
             
             <button 
