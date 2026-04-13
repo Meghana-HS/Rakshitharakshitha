@@ -129,7 +129,7 @@ const IntroScreen = () => {
             fontSize: 'clamp(1.8rem, 4vw, 2.5rem)',
             marginBottom: '1rem'
           }}>
-            Our Moments Together
+            Photo Gallery
           </h1>
           
           <p className="modern-subtitle" style={{ 
@@ -137,7 +137,7 @@ const IntroScreen = () => {
             color: '#666',
             marginBottom: '2rem'
           }}>
-            A journey through our beautiful moments together 💫
+            A collection of special memories
           </p>
           
           <button 
