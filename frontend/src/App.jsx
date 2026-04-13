@@ -18,7 +18,7 @@ import SisterIntro from './components/SisterIntro';
 import SisterDisplay from './components/SisterDisplay';
 import FinalSurprise from './components/FinalSurprise';
 import FinalMessage from './components/FinalMessage';
-import SecretLoverPhotos from './components/SecretLoverPhotos';
+import GalleryPhotos from './components/GalleryPhotos';
 import CinematicSlideshow from './components/CinematicSlideshow';
 import RSeriesDisplay from './components/RSeriesDisplay';
 import ModSeriesDisplay from './components/ModSeriesDisplay';
@@ -46,7 +46,7 @@ function App() {
             <Route path="/sister-display" element={<SisterDisplay />} />
             <Route path="/final-surprise" element={<FinalSurprise />} />
             <Route path="/final-message" element={<FinalMessage />} />
-            <Route path="/secret-lover-photos" element={<SecretLoverPhotos />} />
+            <Route path="/gallery-photos" element={<GalleryPhotos />} />
             <Route path="/cinematic-slideshow" element={<CinematicSlideshow />} />
             <Route path="/r-series" element={<RSeriesDisplay />} />
             <Route path="/mod-series" element={<ModSeriesDisplay />} />

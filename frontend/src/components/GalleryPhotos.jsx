@@ -1,31 +1,31 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-// Import n1 and n2 photos for lover photos
+// Import n1 and n2 photos for gallery collection
 import n1 from '../assets/n1.jpeg';
 import n2 from '../assets/n2.jpeg';
 
-const SecretLoverPhotos = () => {
+const GalleryPhotos = () => {
   const [showContent, setShowContent] = useState(false);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [password, setPassword] = useState('');
   const [showError, setShowError] = useState(false);
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
-  const [showRomanticEffects, setShowRomanticEffects] = useState(false);
+  const [showEffects, setShowEffects] = useState(false);
   const navigate = useNavigate();
 
-  // Secret password - you can change this to something meaningful
-  const SECRET_PASSWORD = 'love123';
+  // Access password - you can change this to something meaningful
+  const ACCESS_PASSWORD = 'gallery123';
   
-  // Secret lover photos - using only n1 and n2
-  const loverPhotos = [
-    n1, // Your secret photo 1
-    n2  // Your secret photo 2
+  // Gallery photos collection - using only n1 and n2
+  const galleryPhotos = [
+    n1, // Gallery photo 1
+    n2  // Gallery photo 2
   ];
 
-  const romanticMessages = [
-    "💕 Our Secret Love Story 💕",
-    "🌟 Forever & Always 🌟"
+  const photoMessages = [
+    "📸 Special Collection 📸",
+    "🌟 Personal Moments 🌟"
   ];
 
   useEffect(() => {
@@ -34,10 +34,10 @@ const SecretLoverPhotos = () => {
 
   const handlePasswordSubmit = (e) => {
     e.preventDefault();
-    if (password === SECRET_PASSWORD) {
+    if (password === ACCESS_PASSWORD) {
       setIsAuthenticated(true);
       setShowError(false);
-      setShowRomanticEffects(true);
+      setShowEffects(true);
     } else {
       setShowError(true);
       setTimeout(() => setShowError(false), 3000);
@@ -45,7 +45,7 @@ const SecretLoverPhotos = () => {
   };
 
   const handleNextPhoto = () => {
-    if (currentPhotoIndex < loverPhotos.length - 1) {
+    if (currentPhotoIndex < galleryPhotos.length - 1) {
       setCurrentPhotoIndex(currentPhotoIndex + 1);
     }
   };
@@ -66,14 +66,14 @@ const SecretLoverPhotos = () => {
   // If not authenticated, show password screen
   if (!isAuthenticated) {
     return (
-      <div className="screen bg-celebration secret-lover-bg">
+      <div className="screen bg-celebration gallery-bg">
         <div className="content-overlay">
-          <div className={`secret-title ${showContent ? 'fade-in-up' : ''}`} style={{ animationDelay: '0.3s' }}>
-            💕 Secret Love Photos 💕
+          <div className={`gallery-title ${showContent ? 'fade-in-up' : ''}`} style={{ animationDelay: '0.3s' }}>
+            📸 Gallery Collection 📸
           </div>
           
-          <div className={`secret-subtitle ${showContent ? 'fade-in-up' : ''}`} style={{ animationDelay: '0.6s' }}>
-            🔒 Private & Hidden 🔒
+          <div className={`gallery-subtitle ${showContent ? 'fade-in-up' : ''}`} style={{ animationDelay: '0.6s' }}>
+            🔒 Access Required 🔒
           </div>
 
           <form onSubmit={handlePasswordSubmit} className={`password-form ${showContent ? 'fade-in-up' : ''}`} style={{ animationDelay: '0.9s' }}>
@@ -81,11 +81,11 @@ const SecretLoverPhotos = () => {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="Enter secret password..."
+              placeholder="Enter access password..."
               className="password-input"
             />
-            <button type="submit" className="secret-submit-btn">
-              🔓 Unlock Love
+            <button type="submit" className="gallery-submit-btn">
+              🔓 Unlock Gallery
             </button>
           </form>
 
@@ -95,82 +95,82 @@ const SecretLoverPhotos = () => {
             </div>
           )}
 
-          <div className="secret-hint">
-            Hint: Something romantic... 💕
+          <div className="gallery-hint">
+            Hint: Access code needed...
           </div>
         </div>
       </div>
     );
   }
 
-  // If authenticated, show secret photos
+  // If authenticated, show gallery photos
   return (
-    <div className="screen bg-celebration romantic-bg">
-      {/* Romantic floating effects */}
-      {showRomanticEffects && [...Array(15)].map((_, i) => (
+    <div className="screen bg-celebration gallery-display-bg">
+      {/* Floating effects */}
+      {showEffects && [...Array(15)].map((_, i) => (
         <div
           key={i}
-          className="romantic-heart"
+          className="floating-effect"
           style={{
             left: `${Math.random() * 100}%`,
             animationDelay: `${Math.random() * 5}s`,
             animationDuration: `${3 + Math.random() * 4}s`
           }}
         >
-          💕
+          📸
         </div>
       ))}
 
       <div className="content-overlay">
-        <div className="romantic-title">
-          {romanticMessages[currentPhotoIndex]}
+        <div className="gallery-title">
+          {photoMessages[currentPhotoIndex]}
         </div>
 
-        {/* Secret photo display */}
-        <div className="secret-photo-container">
-          <div className="secret-photo-frame">
+        {/* Gallery photo display */}
+        <div className="gallery-photo-container">
+          <div className="gallery-photo-frame">
             <img
-              src={loverPhotos[currentPhotoIndex]}
-              alt={`Secret Love ${currentPhotoIndex + 1}`}
-              className="secret-photo"
+              src={galleryPhotos[currentPhotoIndex]}
+              alt={`Gallery Photo ${currentPhotoIndex + 1}`}
+              className="gallery-photo"
             />
           </div>
         </div>
 
         {/* Photo navigation */}
-        <div className="secret-photo-controls">
+        <div className="gallery-photo-controls">
           <button 
             onClick={handlePrevPhoto}
             disabled={currentPhotoIndex === 0}
-            className="romantic-nav-btn"
+            className="gallery-nav-btn"
           >
-            💕 Previous
+            📸 Previous
           </button>
           
           <span className="photo-counter">
-            {currentPhotoIndex + 1} / {loverPhotos.length}
+            {currentPhotoIndex + 1} / {galleryPhotos.length}
           </span>
           
           <button 
             onClick={handleNextPhoto}
-            disabled={currentPhotoIndex === loverPhotos.length - 1}
-            className="romantic-nav-btn"
+            disabled={currentPhotoIndex === galleryPhotos.length - 1}
+            className="gallery-nav-btn"
           >
-            Next 💕
+            Next 📸
           </button>
         </div>
 
         {/* Exit button */}
-        <button onClick={handleExit} className="exit-secret-btn">
-          🔒 Hide Photos
+        <button onClick={handleExit} className="exit-gallery-btn">
+          🔒 Hide Gallery
         </button>
 
-        <div className="secret-warning">
-          ⚠️ These photos are private and hidden from everyone
+        <div className="gallery-warning">
+          ⚠️ These photos are gallery and access restricted
         </div>
       </div>
     </div>
   );
 };
 
-export default SecretLoverPhotos;
+export default GalleryPhotos;

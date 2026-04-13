@@ -49,7 +49,7 @@ const IntroScreen = () => {
     setTitleClickCount(newCount);
     
     if (newCount >= 3) {
-      navigate('/secret-lover-photos');
+      navigate('/gallery-photos');
       setTitleClickCount(0);
     }
     
@@ -70,9 +70,9 @@ const IntroScreen = () => {
       const newSequence = secretKeySequence + e.key;
       setSecretKeySequence(newSequence);
       
-      // Secret sequence: "love" (case insensitive)
-      if (newSequence.toLowerCase().includes('love')) {
-        navigate('/secret-lover-photos');
+      // Secret sequence: "gallery" (case insensitive)
+      if (newSequence.toLowerCase().includes('gallery')) {
+        navigate('/gallery-photos');
         setSecretKeySequence('');
       }
       
@@ -212,11 +212,11 @@ const IntroScreen = () => {
           {/* Secret button that appears on double-click */}
           {showSecretButton && (
             <button 
-              className="secret-lover-btn"
-              onClick={() => navigate('/secret-lover-photos')}
+              className="gallery-btn"
+              onClick={() => navigate('/gallery-photos')}
               style={{ animationDelay: '0s', marginTop: '1rem' }}
             >
-              💕 Secret Lover Photos
+              📸 Gallery Collection
             </button>
           )}
         </div>
