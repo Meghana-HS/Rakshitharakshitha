@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import GlobalMusicControls from './GlobalMusicControls';
 
-// Import Appaji photos
+// Import Bestii photos
 import a1 from '../assets/a1.jpeg';
 import a2 from '../assets/a2.jpeg';
 import a3 from '../assets/a3.jpeg';
@@ -12,7 +12,7 @@ import r9 from '../assets/r9.jpeg';
 import r10 from '../assets/r10.jpeg';
 import r11 from '../assets/r11.jpeg';
 
-const AppajiSeriesDisplay = () => {
+const BestiiSeriesDisplay = () => {
   const [showContent, setShowContent] = useState(false);
   const [showNextButton, setShowNextButton] = useState(false);
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
@@ -73,7 +73,7 @@ const AppajiSeriesDisplay = () => {
           <div className="photo-frame">
             <img
               src={images[currentPhotoIndex]}
-              alt={`Appaji ${currentPhotoIndex + 1}`}
+              alt={`Bestii ${currentPhotoIndex + 1}`}
               className="single-photo"
             />
             <div className="photo-overlay">
@@ -154,9 +154,9 @@ const AppajiSeriesDisplay = () => {
         )}
       </div>
       
-      <GlobalMusicControls section="appaji" />
+      <GlobalMusicControls section="bestii" />
     </div>
   );
 };
 
-export default AppajiSeriesDisplay;
+export default BestiiSeriesDisplay;

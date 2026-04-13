@@ -59,7 +59,7 @@ const ModSeriesDisplay = () => {
   };
 
   const handleManualNext = () => {
-    navigate('/appaji-series');
+    navigate('/bestii-series');
   };
 
   return (
@@ -120,7 +120,7 @@ const ModSeriesDisplay = () => {
         {showNextButton && (
           <div className={`text-center mt-3 fade-in-up`}>
             <h3 className="mb-2" style={{ color: '#666' }}>
-              Continue to Appaji...
+              Continue to Bestii...
             </h3>
             <button 
               className="btn btn-lg px-5 py-3"

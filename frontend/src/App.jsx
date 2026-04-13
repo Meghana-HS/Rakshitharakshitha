@@ -22,7 +22,7 @@ import SecretLoverPhotos from './components/SecretLoverPhotos';
 import CinematicSlideshow from './components/CinematicSlideshow';
 import RSeriesDisplay from './components/RSeriesDisplay';
 import ModSeriesDisplay from './components/ModSeriesDisplay';
-import AppajiSeriesDisplay from './components/AppajiSeriesDisplay';
+import BestiiSeriesDisplay from './components/BestiiSeriesDisplay';
 import FamSeriesDisplay from './components/FamSeriesDisplay';
 import FSeriesDisplay from './components/FSeriesDisplay';
 import VedSeriesDisplay from './components/VedSeriesDisplay';
@@ -50,7 +50,7 @@ function App() {
             <Route path="/cinematic-slideshow" element={<CinematicSlideshow />} />
             <Route path="/r-series" element={<RSeriesDisplay />} />
             <Route path="/mod-series" element={<ModSeriesDisplay />} />
-            <Route path="/appaji-series" element={<AppajiSeriesDisplay />} />
+            <Route path="/bestii-series" element={<BestiiSeriesDisplay />} />
             <Route path="/fam-series" element={<FamSeriesDisplay />} />
             <Route path="/f-series" element={<FSeriesDisplay />} />
             <Route path="/ved-series" element={<VedSeriesDisplay />} />

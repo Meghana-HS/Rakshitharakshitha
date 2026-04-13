@@ -1,51 +1,53 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-// Import birthday video to use its audio for all sections
+// Import different video/audio files for variety
 import birthdayVideo from '../assets/birthday.mp4';
+import ved1Video from '../assets/ved1.mp4';
+import ved2Video from '../assets/ved2.mp4';
 
-// Music playlist - using birthday.mp4 audio for all sections for continuity
+// Music playlist - different tracks for different sections
 const musicPlaylist = {
   intro: {
     // Birthday video audio for intro
     url: birthdayVideo,
-    title: 'Birthday Video Audio',
-    mood: 'Birthday'
+    title: 'Birthday Celebration',
+    mood: 'Celebration'
   },
   classic: {
-    // Same birthday video audio for continuity
-    url: birthdayVideo,
-    title: 'Birthday Video Audio',
-    mood: 'Birthday'
+    // Use ved1 for traditional/classic section
+    url: ved1Video,
+    title: 'Traditional Memories',
+    mood: 'Nostalgic'
   },
   modern: {
-    // Same birthday video audio for continuity
-    url: birthdayVideo,
-    title: 'Birthday Video Audio',
-    mood: 'Birthday'
+    // Use ved2 for modern section
+    url: ved2Video,
+    title: 'Modern Life',
+    mood: 'Contemporary'
   },
-  appaji: {
-    // Same birthday video audio for continuity
+  bestii: {
+    // Birthday video for bestii section
     url: birthdayVideo,
-    title: 'Birthday Video Audio',
-    mood: 'Birthday'
+    title: 'Special Moments',
+    mood: 'Heartfelt'
   },
   family: {
-    // Same birthday video audio for continuity
-    url: birthdayVideo,
-    title: 'Birthday Video Audio',
-    mood: 'Birthday'
+    // Use ved1 for family section
+    url: ved1Video,
+    title: 'Family Love',
+    mood: 'Warm'
   },
   friends: {
-    // Same birthday video audio for continuity
-    url: birthdayVideo,
-    title: 'Birthday Video Audio',
-    mood: 'Birthday'
+    // Use ved2 for friends section
+    url: ved2Video,
+    title: 'Friendship Memories',
+    mood: 'Fun'
   },
   birthday: {
-    // Same birthday video audio for video section too
+    // Birthday video for the actual birthday section
     url: birthdayVideo,
-    title: 'Birthday Video Audio',
-    mood: 'Birthday'
+    title: 'Birthday Celebration',
+    mood: 'Celebration'
   }
 };
 

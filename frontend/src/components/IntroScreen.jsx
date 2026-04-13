@@ -25,8 +25,8 @@ const IntroScreen = () => {
     navigate('/mod-series');
   };
 
-  const handleAppajiSeries = () => {
-    navigate('/appaji-series');
+  const handleBestiiSeries = () => {
+    navigate('/bestii-series');
   };
 
   const handleFamSeries = () => {
@@ -177,8 +177,8 @@ const IntroScreen = () => {
             </button>
             
             <button 
-              className="section-btn appaji-series-btn"
-              onClick={handleAppajiSeries}
+              className="section-btn bestii-series-btn"
+              onClick={handleBestiiSeries}
               style={{ animationDelay: '2.0s', marginTop: '0.5rem', fontSize: '0.85rem', padding: '0.6rem 1.2rem' }}
             >
               Bestii
