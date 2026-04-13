@@ -1,22 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-// Import r-series photos for lover photos
-import r1 from '../assets/r1.jpeg';
-import r2 from '../assets/r2.jpeg';
-import r3 from '../assets/r3.jpeg';
-import r4 from '../assets/r4.jpeg';
-import r5 from '../assets/r5.jpeg';
-import r6 from '../assets/r6.jpeg';
-import r7 from '../assets/r7.jpeg';
-import r8 from '../assets/r8.jpeg';
-import r9 from '../assets/r9.jpeg';
-import r10 from '../assets/r10.jpeg';
-import r11 from '../assets/r11.jpeg';
-import r12 from '../assets/r12.jpeg';
-import r13 from '../assets/r13.jpeg';
-import r14 from '../assets/r14.jpeg';
-import r15 from '../assets/r15.jpeg';
+// Import n1 and n2 photos for lover photos
+import n1 from '../assets/n1.jpeg';
+import n2 from '../assets/n2.jpeg';
 
 const SecretLoverPhotos = () => {
   const [showContent, setShowContent] = useState(false);
@@ -30,31 +17,15 @@ const SecretLoverPhotos = () => {
   // Secret password - you can change this to something meaningful
   const SECRET_PASSWORD = 'love123';
   
-  // Secret lover photos - using your r-series photos
+  // Secret lover photos - using only n1 and n2
   const loverPhotos = [
-    r1, // Your r-series photo 1
-    r2, // Your r-series photo 2
-    r3, // Your r-series photo 3
-    r4, // Your r-series photo 4
-    r5, // Your r-series photo 5
-    r6, // Your r-series photo 6
-    r7, // Your r-series photo 7
-    r8, // Your r-series photo 8
-    r9, // Your r-series photo 9
-    r10, // Your r-series photo 10
-    r11, // Your r-series photo 11
-    r12, // Your r-series photo 12
-    r13, // Your r-series photo 13
-    r14, // Your r-series photo 14
-    r15  // Your r-series photo 15
+    n1, // Your secret photo 1
+    n2  // Your secret photo 2
   ];
 
   const romanticMessages = [
     "💕 Our Secret Love Story 💕",
-    "🌟 Forever & Always 🌟",
-    "💑 Two Hearts, One Soul 💑",
-    "💝 My Love, My Life 💝",
-    "💖 Secret Moments Together 💖"
+    "🌟 Forever & Always 🌟"
   ];
 
   useEffect(() => {
