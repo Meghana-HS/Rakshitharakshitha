@@ -379,7 +379,7 @@ body {
 /* BEAUTIFUL SINGLE PHOTO SLIDESHOW */
 .single-photo-slideshow {
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   position: relative;
 }
@@ -387,8 +387,8 @@ body {
 .photo-frame {
   position: relative;
   width: 100%;
-  height: 70vh;
-  max-height: 600px;
+  height: 85vh;
+  max-height: 800px;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);

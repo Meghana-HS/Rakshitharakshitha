@@ -100,7 +100,7 @@ const IntroScreen = () => {
     }} onDoubleClick={handleDoubleClick}>
       {/* Floating decorative elements */}
       <div className="floating-icons">
-        <span className="float-icon" style={{ top: '15%', left: '5%', animationDelay: '0s' }}>📸</span>
+        <span className="float-icon" style={{ top: '15%', left: '5%', animationDelay: '0s' }}>🎂</span>
         <span className="float-icon" style={{ top: '25%', right: '8%', animationDelay: '0.5s' }}>💕</span>
         <span className="float-icon" style={{ top: '65%', left: '7%', animationDelay: '1s' }}>🌸</span>
         <span className="float-icon" style={{ top: '75%', right: '5%', animationDelay: '1.5s' }}>✨</span>
@@ -123,7 +123,7 @@ const IntroScreen = () => {
           boxShadow: '0 20px 60px rgba(255,105,180,0.3)',
           maxWidth: '650px'
         }}>
-          <div style={{ fontSize: '3.5rem', marginBottom: '1rem' }}>📸 ✨</div>
+          <div style={{ fontSize: '3.5rem', marginBottom: '1rem' }}>🎂 🎉 ✨</div>
           
           <h1 className="modern-title" style={{ 
             fontSize: 'clamp(1.8rem, 4vw, 2.5rem)',
@@ -165,7 +165,7 @@ const IntroScreen = () => {
               onClick={handleRSeries}
               style={{ animationDelay: '1.8s', marginTop: '0.5rem', fontSize: '0.85rem', padding: '0.6rem 1.2rem' }}
             >
-              📸 R Series (Classic)
+              🎉 R Series (Classic)
             </button>
             
             <button 
