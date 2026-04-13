@@ -50,7 +50,7 @@ const GeneralIntro = () => {
             fontSize: 'clamp(1.8rem, 4vw, 2.5rem)',
             marginBottom: '1rem'
           }}>
-            Our Moments Together
+            Photo Collection
           </h1>
           
           <p className="modern-message" style={{ 
@@ -59,8 +59,8 @@ const GeneralIntro = () => {
             marginBottom: '2rem',
             lineHeight: '1.8'
           }}>
-            Every photo holds a story, every moment holds a memory.<br/>
-            These are the beautiful times we shared 💕
+            Every photo holds a story, every memory holds a place.<br/>
+            These are the beautiful times captured
           </p>
           
           <button 
