@@ -106,67 +106,97 @@ const GalleryPhotos = () => {
   // If authenticated, show gallery photos
   return (
     <div className="screen bg-celebration gallery-display-bg">
-      {/* Floating effects */}
-      {showEffects && [...Array(15)].map((_, i) => (
+      {/* Enhanced floating effects */}
+      {showEffects && [...Array(20)].map((_, i) => (
         <div
           key={i}
           className="floating-effect"
           style={{
             left: `${Math.random() * 100}%`,
-            animationDelay: `${Math.random() * 5}s`,
-            animationDuration: `${3 + Math.random() * 4}s`
+            top: `${Math.random() * 100}%`,
+            animationDelay: `${Math.random() * 3}s`,
+            animationDuration: `${4 + Math.random() * 3}s`,
+            fontSize: `${1 + Math.random() * 1.5}rem`
           }}
         >
-          📸
+          {['📸', '🌟', '✨', '🎆', '🎊'][i % 5]}
         </div>
       ))}
 
       <div className="content-overlay">
-        <div className="gallery-title">
-          {photoMessages[currentPhotoIndex]}
+        {/* Modern title with animation */}
+        <div className="gallery-title-container">
+          <h2 className="gallery-title">
+            {photoMessages[currentPhotoIndex]}
+          </h2>
+          <div className="title-underline"></div>
         </div>
 
-        {/* Gallery photo display */}
+        {/* Enhanced gallery photo display */}
         <div className="gallery-photo-container">
           <div className="gallery-photo-frame">
-            <img
-              src={galleryPhotos[currentPhotoIndex]}
-              alt={`Gallery Photo ${currentPhotoIndex + 1}`}
-              className="gallery-photo"
-            />
+            <div className="photo-wrapper">
+              <img
+                src={galleryPhotos[currentPhotoIndex]}
+                alt={`Gallery Photo ${currentPhotoIndex + 1}`}
+                className="gallery-photo"
+              />
+              <div className="photo-overlay-info">
+                <span className="photo-number-badge">
+                  {currentPhotoIndex + 1}
+                </span>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Photo navigation */}
+        {/* Enhanced photo navigation */}
         <div className="gallery-photo-controls">
           <button 
             onClick={handlePrevPhoto}
             disabled={currentPhotoIndex === 0}
-            className="gallery-nav-btn"
+            className="gallery-nav-btn prev-btn"
           >
-            📸 Previous
+            <span className="nav-icon">←</span>
+            <span className="nav-text">Previous</span>
           </button>
           
-          <span className="photo-counter">
-            {currentPhotoIndex + 1} / {galleryPhotos.length}
-          </span>
+          {/* Photo indicators */}
+          <div className="photo-indicators">
+            {galleryPhotos.map((_, index) => (
+              <div
+                key={index}
+                className={`indicator ${index === currentPhotoIndex ? 'active' : ''}`}
+                onClick={() => setCurrentPhotoIndex(index)}
+              />
+            ))}
+          </div>
           
           <button 
             onClick={handleNextPhoto}
             disabled={currentPhotoIndex === galleryPhotos.length - 1}
-            className="gallery-nav-btn"
+            className="gallery-nav-btn next-btn"
           >
-            Next 📸
+            <span className="nav-text">Next</span>
+            <span className="nav-icon">→</span>
           </button>
         </div>
 
-        {/* Exit button */}
-        <button onClick={handleExit} className="exit-gallery-btn">
-          🔒 Hide Gallery
-        </button>
+        {/* Enhanced controls panel */}
+        <div className="gallery-controls-panel">
+          <button onClick={handleExit} className="exit-gallery-btn">
+            <span className="btn-icon">🔒</span>
+            <span className="btn-text">Exit Gallery</span>
+          </button>
+          
+          <div className="photo-info">
+            <span className="info-text">Photo {currentPhotoIndex + 1} of {galleryPhotos.length}</span>
+          </div>
+        </div>
 
-        <div className="gallery-warning">
-          ⚠️ These photos are gallery and access restricted
+        <div className="gallery-info">
+          <span className="info-badge">📸 Gallery Collection</span>
+          <span className="access-info">Private Access Required</span>
         </div>
       </div>
     </div>
